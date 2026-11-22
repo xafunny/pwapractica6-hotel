@@ -1,0 +1,89 @@
+/* Hotel Mirador - estilos (Bootstrap 5 + ajustes propios) */
+
+:root {
+  --azul: #13294b;
+  --azul-2: #1f3d6b;
+  --dorado: #c9a54b;
+  --dorado-osc: #a8852f;
+  --crema: #f7f4ee;
+  --texto: #1f2933;
+  --gris: #6b7280;
+  --borde: #e7e2d8;
+}
+
+body { font-family: 'Inter', system-ui, sans-serif; background: var(--crema); color: var(--texto); font-size: .94rem; min-height: 100vh; display: flex; flex-direction: column; }
+main { flex: 1; }
+a { color: var(--azul-2); }
+
+.titulo, .marca, .cifra span, .precio { font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 700; }
+/* números normales: con esta fuente el 1 y el 0 parecen letras */
+.cifra span, .precio { font-variant-numeric: lining-nums; }
+.titulo { font-size: 2.1rem; color: var(--azul); }
+.subtitulo { font-size: 1.05rem; font-weight: 600; margin-bottom: .9rem; }
+
+.btn-dorado { background: var(--dorado); color: #fff; border: 0; }
+.btn-dorado:hover, .btn-dorado:focus { background: var(--dorado-osc); color: #fff; }
+.form-control:focus, .form-select:focus { border-color: var(--dorado); box-shadow: 0 0 0 .2rem rgba(201, 165, 75, .2); }
+.form-check-input:checked { background-color: var(--dorado); border-color: var(--dorado); }
+.nav-underline .nav-link { color: var(--gris); }
+.nav-underline .nav-link.active { color: var(--azul); border-bottom-color: var(--dorado); }
+.table > thead th { font-size: .78rem; color: var(--gris); font-weight: 500; }
+
+/* barra superior */
+.barra { background: var(--azul); padding: .7rem 0; }
+.marca { display: flex; align-items: center; gap: .5rem; color: #fff; font-size: 1.45rem; }
+.marca:hover { color: var(--dorado); }
+.barra .nav-link { color: rgba(255, 255, 255, .75); font-size: .9rem; }
+.barra .nav-link:hover { color: #fff; }
+.barra .nav-link.active { color: var(--dorado); }
+.navbar-toggler { border: 0; }
+.avatar { width: 34px; height: 34px; border-radius: 50%; background: var(--dorado); color: var(--azul); display: inline-flex; align-items: center; justify-content: center; font-weight: 600; font-size: .78rem; }
+.pie { padding: 1rem 0; font-size: .8rem; color: var(--gris); border-top: 1px solid var(--borde); }
+
+/* bloques */
+.tarjeta { background: #fff; border: 1px solid var(--borde); border-radius: 10px; padding: 1.2rem; }
+.cifra { display: block; height: 100%; background: #fff; border: 1px solid var(--borde); border-radius: 10px; padding: 1rem 1.1rem; color: var(--gris); font-size: .82rem; text-decoration: none; }
+.cifra span { display: block; font-size: 2rem; line-height: 1.1; color: var(--azul); }
+a.cifra:hover { border-color: var(--dorado); }
+.fila { display: flex; justify-content: space-between; align-items: center; gap: 1rem; padding: .85rem 1.2rem; border-bottom: 1px solid var(--borde); color: inherit; text-decoration: none; }
+.fila:last-child { border-bottom: 0; }
+a.fila:hover { background: #fbfaf6; }
+.movimiento { display: flex; align-items: center; gap: .8rem; padding: .6rem 0; border-bottom: 1px solid var(--borde); }
+.movimiento:last-child { border-bottom: 0; }
+
+/* mapa de habitaciones */
+.mapa { display: grid; grid-template-columns: repeat(auto-fill, minmax(78px, 1fr)); gap: .5rem; }
+.hab { border-radius: 8px; padding: .55rem; text-align: center; border: 1px solid; display: flex; flex-direction: column; }
+.hab strong { font-size: 1.1rem; }
+.hab small { font-size: .7rem; }
+.hab-disponible { background: #ecfdf3; border-color: #a7e3bf; color: #166534; }
+.hab-ocupada { background: #fef2f2; border-color: #f5b5b5; color: #991b1b; }
+.hab-mantenimiento { background: #fffbeb; border-color: #f2d58b; color: #92400e; }
+
+/* cliente */
+.bienvenida { background: linear-gradient(135deg, var(--azul), var(--azul-2)); color: #fff; border-radius: 12px; padding: 1.8rem; }
+.buscador label { color: rgba(255, 255, 255, .8); }
+.habitacion { background: #fff; border: 1px solid var(--borde); border-radius: 10px; overflow: hidden; height: 100%; }
+.habitacion-foto { height: 110px; display: flex; align-items: flex-end; padding: .6rem .9rem; color: #fff; font-weight: 600; background: var(--azul-2); }
+.tipo-simple { background: linear-gradient(135deg, #1f3d6b, #4a6fa5); }
+.tipo-doble { background: linear-gradient(135deg, #13294b, #2d5a8c); }
+.tipo-familiar { background: linear-gradient(135deg, #2f4f4f, #4f7f6f); }
+.tipo-suite { background: linear-gradient(135deg, #13294b, #c9a54b); }
+.precio { font-size: 1.6rem; color: var(--azul); }
+
+/* colores por rol en usuarios */
+.rol-1 { background: var(--azul); }
+.rol-2 { background: var(--dorado); }
+.rol-3 { background: #0e7490; }
+.rol-4 { background: #4b5563; }
+.rol-5 { background: #7c3aed; }
+
+/* login */
+.portada { min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 1.5rem; background: linear-gradient(160deg, var(--azul) 0 45%, var(--crema) 45%); }
+.portada-caja { width: 100%; max-width: 380px; background: #fff; border-radius: 14px; padding: 2rem; text-align: center; box-shadow: 0 14px 40px rgba(19, 41, 75, .18); }
+.portada-caja.ancha { max-width: 500px; }
+main:not(.container) > .aviso { position: fixed; top: 1rem; left: 50%; transform: translateX(-50%); z-index: 20; }
+
+@media (max-width: 575px) {
+  .titulo { font-size: 1.7rem; }
+}

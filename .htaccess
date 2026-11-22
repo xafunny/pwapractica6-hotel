@@ -1,0 +1,6 @@
+# No listar carpetas y bloquear los archivos internos
+Options -Indexes
+DirectoryIndex index.php
+
+RedirectMatch 403 /(config|core|models|controllers|views)(/|$)
+RedirectMatch 403 \.(sql|md|log)$
