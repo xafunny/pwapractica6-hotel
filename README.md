@@ -2,6 +2,19 @@
 
 Sistema de reservas de hotel. Práctica 6 de Programación Web Avanzada.
 
+## Integrantes
+
+- Jhoao Guala
+- Danna Idrovo
+- Ckarlos Daza
+- Madelen Toledo
+- Keyla Duran
+- Diego Cobeña
+
+## Sitio publicado
+
+https://hotelmirador.infinityfree.me
+
 ## Tecnologías
 
 HTML, CSS, Bootstrap 5, JavaScript, PHP 8 (sin frameworks) y MySQL.

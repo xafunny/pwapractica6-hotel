@@ -1,9 +1,12 @@
 <?php defined('APP') or exit; ?>
 </main>
 
-<?php if (Auth::check()): ?>
-<footer class="pie"><div class="container">Hotel Mirador · Sistema de reservas</div></footer>
-<?php endif; ?>
+<footer class="pie">
+  <div class="container d-flex flex-wrap justify-content-between gap-2">
+    <span>Hotel Mirador · Sistema de reservas</span>
+    <span>Jhoao Guala · Danna Idrovo · Ckarlos Daza · Madelen Toledo · Keyla Duran · Diego Cobeña</span>
+  </div>
+</footer>
 
 <div class="toast-container position-fixed bottom-0 end-0 p-3" id="toasts"></div>
 
